@@ -15,8 +15,10 @@ CPPOBJS=$(patsubst $(SRC)/%.cpp, $(OBJ)/%.o, $(CPPSRCS))
 BIN=bin
 OUT=pseudo
 
+MAIN_FILE=$(src)/main.cpp
+
 $(BIN)/$(OUT): $(COBJS) $(CPPOBJS)
-	$(CXX) -o $@ $(SRC)/main.cpp 
+	$(CXX) -o $@ $(MAIN_FILE)
 
 $(COBJS): $(CSRCS)
 	$(CC) $(CFLAGS) -c -o %@ $<
