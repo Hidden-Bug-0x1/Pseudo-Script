@@ -15,7 +15,7 @@ CPPOBJS=$(patsubst $(SRC)/%.cpp, $(OBJ)/%.o, $(CPPSRCS))
 BIN=bin
 OUT=pseudo
 
-MAIN_FILE=$(src)/main.cpp
+MAIN_FILE=$(SRC)/main.cpp
 
 $(BIN)/$(OUT): $(COBJS) $(CPPOBJS)
 	$(CXX) -o $@ $(MAIN_FILE)
