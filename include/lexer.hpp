@@ -1,7 +1,9 @@
 #ifndef LEXER_HPP
 #define LEXER_HPP
 
-#include "pseudo.h"
+#include <string>
+#include "position.hpp"
+#include "token.hpp"
 
 class Lexer {
 private:

@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "../include/pseudo.h"
+#include "../include/lexer.hpp"
 
 int main(int argc, char* argv[])
 {

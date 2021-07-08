@@ -1,7 +1,7 @@
 #ifndef POSITION_HPP
 #define POSITION_HPP
 
-#define ushort unsigned short
+#include <stdlib.h>
 
 class Position {
 private:

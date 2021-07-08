@@ -1,7 +1,8 @@
 #ifndef TOKEN_HPP
 #define TOKEN_HPP
 
-#include "pseudo.h"
+#include "position.hpp"
+#include <string>
 
 enum class TOKEN {
   IDENTIFIER, // a variable/class/function name
