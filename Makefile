@@ -1,7 +1,7 @@
 CC=gcc
 CXX=g++
 CFLAGS=-Wall -g
-CXXFLAGS=
+CXXFLAGS=-Wall -g -std=c++17
 
 SRC=src
 OBJ=objs
@@ -15,16 +15,16 @@ CPPOBJS=$(patsubst $(SRC)/%.cpp, $(OBJ)/%.o, $(CPPSRCS))
 BIN=bin
 OUT=pseudo
 
-MAIN_FILE=$(SRC)/main.cpp
+MAIN_FILE=$(OBJ)/main.o
 
-$(BIN)/$(OUT): $(COBJS) $(CPPOBJS)
-	$(CXX) -o $@ $(MAIN_FILE)
+$(BIN)/$(OUT): $(COBJS) $(CPPOBJS) $(MAIN_FILE)
+	$(CXX) -o $@ $^
 
-$(COBJS): $(CSRCS)
-	$(CC) $(CFLAGS) -c -o %@ $<
+$(OBJ)/%.o: $(SRC)/%.c
+	$(CC) -c $< $(CFLAGS) -o $@ 
 
-$(CPPOBJS): $(CPPSRCS)
-	$(CXX) $(CXXFLAGS) -c -o $@ $<
+$(OBJ)/%.o: $(SRC)/%.cpp
+	$(CXX) -c $< $(CXXFLAGS) -o $@
 
 run:
 	@echo "Program output:"

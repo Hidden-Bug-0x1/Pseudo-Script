@@ -13,7 +13,8 @@ enum class TOKEN {
   L_CURLY,    // {  
   R_CURLY,    // }
   L_BRACKET,  // [
-  R_BRACKET   // ]
+  R_BRACKET,  // ]
+  EORF,       // no more text
 };
 
 class Token {
