@@ -9,8 +9,9 @@ private:
   ushort line;
 public:
   Position(ushort col_, ushort line_);
-  void advance();
-  Position* copy();
+  void advance(); // increment col
+  void newline(); // increment line and reset col
+  Position* copy(); // create a new Position with the same values
 };
 
 #endif
