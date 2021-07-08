@@ -22,7 +22,6 @@ void Position::advance()
 void Position::newline()
 {
   line++;
-  index++;
   col = -1;
 } 
 
