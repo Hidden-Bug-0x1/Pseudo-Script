@@ -29,7 +29,7 @@
 
 > - "initialize `identifier` to `value`"
 >   - "initialize `identifier`"
->   - "initialize `identifier` to `[]`" <== creates an array
+>   - "initialize `identifier` to `[values...]`" <== creates an array
 > - "set `identifier` to `value`"
 > - "reset `identifier`" <== resets to 0
 >   - "reset `identifier` to `value`"

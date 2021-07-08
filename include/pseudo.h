@@ -4,5 +4,9 @@
 #include "lexer.hpp"
 #include "parser.hpp"
 #include "token.hpp"
+#include "position.hpp"
+#include "error.hpp"
+
+#include <string>
 
 #endif
